@@ -1,0 +1,4 @@
+<div class="d-flex flex-column">
+    <!-- <app-datatable [rowData]='slctdRowData'></app-datatable> -->
+    <app-datatable (getData)="pushRows($event)"></app-datatable>
+</div>

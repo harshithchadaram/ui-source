@@ -1,3 +1,6 @@
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+@import '~ag-grid-community/dist/styles/ag-theme-bootstrap.css';
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
@@ -17,7 +20,7 @@ $angular-popup-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $angular-popup-warn: mat-palette($mat-red);
-
+$odd-row-background-color: #000;
 // Create the theme object (a Sass map containing all of the palettes).
 $angular-popup-theme: mat-light-theme($angular-popup-primary, $angular-popup-accent, $angular-popup-warn);
 
@@ -35,5 +38,28 @@ $angular-popup-theme: mat-light-theme($angular-popup-primary, $angular-popup-acc
    {
      opacity: 1;
    }
+
+.ag-theme-bootstrap {
+  .ag-row{
+    height: 50px !important;
+  }
+.ag-row-even{
+  background: #f0f0f0;
+}
+.ag-row-odd{
+  background: #ffffff;
+}
+.ag-body-viewport{
+  background-color: white;
+}
+.ag-ltr .ag-has-focus .ag-cell-focus:not(.ag-cell-range-selected){
+ border: none;
+ outline: none;
+}
+.ag-cell{
+  line-height: 47px;
+  left: 20px;
+}
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

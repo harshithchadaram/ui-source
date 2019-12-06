@@ -1,0 +1,24 @@
+<!-- <ngx-datatable class="material" [rows]="rows" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+    [rowHeight]="50" [scrollbarV]="true" [sorts]="[{prop: 'name', dir: 'desc'}]">
+    <ngx-datatable-column name="Company" prop="id">
+        <ng-template let-row="row" let-rowIndex="rowIndex" ngx-datatable-cell-template>
+            <button (click)='selectRows(rowIndex)'></button>
+            {{row.serial_number}}
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Name" prop="id">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+            {{row.serial_number}}
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Gender" prop="id">
+    </ngx-datatable-column>
+</ngx-datatable> -->
+<ag-grid-angular style="width: 500px; height: 200px;" class="ag-theme-bootstrap" [rowData]="slctdRowData"
+    [columnDefs]="slctdColumnDefs" (gridReady)="onGridReady($event)" [frameworkComponents]="frameworkComponents"
+    [gridOptions]="gridOptions" deltaRowDataMode=true>
+</ag-grid-angular>
+<ag-grid-angular style="width: 500px; height: 200px;" class="ag-theme-bootstrap" [rowData]="rowData"
+    [columnDefs]="columnDefs" (gridReady)="onGridReady($event)" [frameworkComponents]="frameworkComponents"
+    deltaRowDataMode=true>
+</ag-grid-angular>
