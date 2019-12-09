@@ -1,0 +1,31 @@
+<button class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(longContent)">Large modal</button>
+
+<ng-template #longContent let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <p>One fine body&hellip;</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+    </div>
+</ng-template>
+
+
+<mat-tab-group animationDuration="0ms" [selectedIndex]="3">
+    <mat-tab label="First">Content 1</mat-tab>
+    <mat-tab label="Second">Content 2</mat-tab>
+    <mat-tab label="Third">Content 3</mat-tab>
+</mat-tab-group>
+<a routerLink="book-a-meeting" [state]="{data:history?.state?.data}">book</a>
+<a [routerLink]="data?.name ? ['create-reservation'] : []" (click)='createReservation($event)'>create</a>
+<button (click)="search($evt)">Search</button>
+<button (click)="nextStep($evt)">Next Step</button>
+
+<router-outlet (activate)="getSelectedData($event)"></router-outlet>
+<!-- <app-datatable></app-datatable> -->

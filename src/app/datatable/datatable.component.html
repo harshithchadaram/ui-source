@@ -14,11 +14,11 @@
     <ngx-datatable-column name="Gender" prop="id">
     </ngx-datatable-column>
 </ngx-datatable> -->
-<ag-grid-angular style="width: 500px; height: 200px;" class="ag-theme-bootstrap" [rowData]="slctdRowData"
-    [columnDefs]="slctdColumnDefs" (gridReady)="onGridReady($event)" [frameworkComponents]="frameworkComponents"
+<ag-grid-angular style="width: 500px; height: 200px;" class="ag-theme-bootstrap" [rowData]="selectedData"
+    [columnDefs]="slctdColumnDefs" (gridReady)="onSelectedGridReady($event)" [frameworkComponents]="frameworkComponents"
     [gridOptions]="gridOptions" deltaRowDataMode=true>
 </ag-grid-angular>
-<ag-grid-angular style="width: 500px; height: 200px;" class="ag-theme-bootstrap" [rowData]="rowData"
+<ag-grid-angular style="width: 500px; height: 200px;" class="ag-theme-bootstrap" *ngIf='showRooms' [rowData]="rowData"
     [columnDefs]="columnDefs" (gridReady)="onGridReady($event)" [frameworkComponents]="frameworkComponents"
     deltaRowDataMode=true>
 </ag-grid-angular>

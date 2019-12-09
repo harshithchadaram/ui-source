@@ -11,6 +11,9 @@ import { SelectedDatatableComponent } from './selected-datatable/selected-datata
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { AgGridModule } from 'ag-grid-angular';
 import { ButtonRendererComponent } from './button-renderer/button-renderer.component';
+import { HomeComponent } from './home/home.component';
+import { ReserveComponent } from './reserve/reserve.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { ButtonRendererComponent } from './button-renderer/button-renderer.compo
     DatatableParentComponent,
     DatatableComponent,
     SelectedDatatableComponent,
-    ButtonRendererComponent
+    ButtonRendererComponent,
+    HomeComponent,
+    ReserveComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,8 @@ import { ButtonRendererComponent } from './button-renderer/button-renderer.compo
     BrowserAnimationsModule,
     MatTabsModule,
     NgxDatatableModule,
-    AgGridModule.withComponents([ButtonRendererComponent])
+    AgGridModule.withComponents([ButtonRendererComponent]),
+    AppRoutingModule,
   ], exports: [
     AppComponent
   ],
